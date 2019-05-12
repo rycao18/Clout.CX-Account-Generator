@@ -3,7 +3,8 @@ const request = require('request');
 const siteKey = "6LedLp4UAAAAAADezcdlHAaxq5oEtOFzTWWl8aLQ";
 const twoCaptchaAPIKey = '';
 const pageUrl = 'https://clout.cx/register';
-const password = ""
+const password = "";
+const targetUsername = "hehe";
 
 function getCaptcha(callback) {
 	request({
@@ -62,7 +63,7 @@ getCaptcha((taskID) => {
 				"x-requested-with": "XMLHttpRequest"
 			},
 			data: {
-				"username": "rycao18",
+				"username": targetUsername,
 				"email": genEmail(),
 				"password": password,
 				"confirm_password": password,
